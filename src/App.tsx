@@ -23,7 +23,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/login" element={session ? <Navigate to="/logged" /> : <LoginPage />} />
+        <Route path="/login" element={session ? <Navigate to="/" /> : <LoginPage />} />
         <Route path="/" element={session ? <HomePage /> : <Navigate to="/login" />} />
         <Route path="/daily/:roomId" element={session ?  <DailyPage /> : <Navigate to="/login" /> }/>
       </Routes>
